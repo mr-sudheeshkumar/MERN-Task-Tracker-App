@@ -1,2 +1,0 @@
-# MERN-Task-Tracker-App
- 
