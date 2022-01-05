@@ -35,4 +35,4 @@ The Goal of this app is to develop a MERN  Task Tracker App to achieve the requi
 
 ### ***SCREENSHOTS DEMO***
 ![1.png](https://github.com/mr-sudheeshkumar/MERN-Task-Tracker-App/blob/main/SCREENSHOTS/1.png)
-![2.png](https://github.com/mr-sudheeshkumar/MERN-Task-Tracker-App/blob/main/SCREENSHOTS/6.png)
+![2.png](https://github.com/mr-sudheeshkumar/MERN-Task-Tracker-App/blob/main/SCREENSHOTS/5.png)
