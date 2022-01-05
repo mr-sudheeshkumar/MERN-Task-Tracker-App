@@ -36,7 +36,7 @@ app.post("/api/login", async (req,res) =>{
     const usercred = req.body;
     const user = await userModel.findOne(usercred);
     if(user){
-        return res.json({data : user.username});
+        return res.json({data : user.name});
     }else{
         return res.json({data : "failed"});
     }
