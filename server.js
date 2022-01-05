@@ -1,14 +1,25 @@
+require("dotenv").config();
 const {json} = require('express');
 const express = require('express');
 const app = express();
 app.use(express.json());
+const cors = require('cors');
+const path = require('path');
+app.use(cors());
 const port = 4000;
 const mongoose = require("mongoose");
 
 const userModel = require("./models/users");
 const taskModel =  require("./models/tasks");
 
-mongoose.connect("mongodb://127.0.0.1:27017/skdb").then(() => console.log("MongoDB connected."));
+mongoose.connect(process.env.MONGOURL).then(() => console.log("MongoDB connected."));
+
+
+app.use(express.static(path.join(__dirname, './client/build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build'))
+})
+
 
 app.get('/api/', (req, res) => res.send('Hello World!'));
 
@@ -64,4 +75,4 @@ app.post("/api/deletetask",async (req,res)=>{
     }
 });
 
-app.listen(port, () => console.log(`Task tracker app listening on port ${port}!`))
+app.listen(process.env.PORT || port, () => console.log(`Task tracker app listening on port ${port}!`))
