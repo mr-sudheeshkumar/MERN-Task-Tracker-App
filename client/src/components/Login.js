@@ -29,7 +29,7 @@ export const Login = () =>{
     }
     const loginfailed = () =>{
         setwrongcred("Entered Credentials are incorrect.");
-        setTimeout(() => window.location.reload(true),3000);
+        setTimeout(() => navigate("/"),3000);
     }
     useEffect(()=>{
         if(loginstatus){

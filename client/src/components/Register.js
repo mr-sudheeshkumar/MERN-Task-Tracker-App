@@ -19,7 +19,7 @@ export const Register = () =>{
     }
     const regsuccess = () =>{
         setmsg("User registered successfully.");
-        setTimeout(() => window.location.reload(true),5000);
+        setTimeout(() => navigate("/"),5000);
     }
     useEffect(()=>{
         if(loginstatus){
